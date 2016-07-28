@@ -1,0 +1,218 @@
+/*南瓜鱼*/
+/*20160603*/
+/*sceondindex.html*/
+
+* { 
+	margin: 0; 
+	padding: 0; 
+}
+ul { 
+	list-style-type: none;
+}
+a { 
+	text-decoration: none;
+	color: #333;
+}
+img, input, select, option{
+	border: 0;
+}
+body,html{
+	margin: 0;
+	*margin: 0;
+	*overflow: hidden; /*兼容ie7:全屏右侧不会出现滚动条*/
+}
+body{
+ 	height: auto;
+	font: 14px Microsoft YaHei,Verdana,Geneva,sans-serif; 
+ 	background: url(../images/bgd1_01.png) repeat-x top center; 
+ 	background-color: #093F5F; 
+}
+
+/*共同样式*/
+
+.left{
+	float: left;
+}
+.right { 
+	float: right;
+}
+.clear {
+	clear:  both;
+}
+.width1{
+	width: 100%;
+	margin: 0 auto;
+}
+
+/*网页内容*/
+.main{
+	padding: 10px 0;
+	min-width: 320px;
+	max-width: 1200px; /*兼容宽屏幕*/
+	max-height: 900px;	/*宽屏幕1600*900*/
+	height:auto;
+}
+/*logo*/
+.main .header {
+	margin-top: 2%;
+	text-align: center; /*logo居中*/
+
+}
+.main .header .logo {
+	width: 38%;
+}
+.header .author {	/*作者*/
+	margin-bottom: 20px;
+	margin-top: 10px;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	*font: 18px;	/*1E7的字体偏大，需要统一*/
+	color: #fff;
+
+}
+.main .content {	/*content*/
+	width: 100%;
+	height: 180px;
+	text-align: center;
+}
+.content .cont-list {
+	/*border: 1px solid #ddd;*/
+}
+.content .cont-list li {
+	position: relative;
+	top: 0;
+	display: inline-block;
+	margin-right: 2px;
+	width: 23%;
+	height: 100px;
+	height: auto;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	background-color: #fff;
+
+}
+/*解决ie7的inlie-block兼容。必须是这个顺序*/
+.content .cont-list li{
+	*display: inline;
+	*margin-right: 6px;
+}
+.content .cont-list a{
+	display: block;
+}
+/*字体*/
+
+.cont-list .icon-text {
+	height: 180px;
+	line-height: 30px;
+	*width: 240px;
+}
+.cont-list .icon-text h3{
+	margin-bottom: 40px;
+	width: 100%;
+	height: 50px;
+	color: #fff;
+	line-height: 50px;
+	background: #079ABF;
+}
+
+.cont-list .icon-text a:hover {
+	color: #F89304;
+	/*text-decoration: underline;*/
+}
+.cont-list .icon-img {
+	display: none;
+}
+
+/*台式屏幕*/
+@media only screen and (min-width: 1440px){
+	.main .header {
+		margin-top: 8%;
+	}
+	.main .header .logo {
+		width: 45%;
+	}
+}
+
+/*大屏幕*/
+@media only screen and (min-width: 1024px){
+	.main {
+		max-width: 1130px !important;		/*max-width真的好友好。解决了1024--1280的无法居中问题*/
+		background-color:#6AE2BC;
+	}
+	.content .cont-list li {
+		width: 240px;
+	}
+}
+
+/*中屏幕*/
+@media only screen and (min-width: 480px) and (max-width: 900px){
+	/*logo太大了*/
+	.main .logo {
+		margin-top: 100px;
+		width: 60%;
+	}
+	.main .cont-list li {
+		width: 40% ;
+		margin-bottom: 10px;
+	}
+
+}
+
+/*******************************************************************/
+/*小屏幕*/
+@media only screen and (max-width: 480px){
+	/*logo和框架*/
+	.main {
+		max-height: 640px;
+	}
+	.main .header .logo {
+		width: 60%;
+	}
+	.main .author {
+		margin-bottom: 5px;
+	}
+	.content .cont-list li {
+		margin-bottom: 5px;
+		padding: 5px;
+		width: 80%;
+		height: 80px;
+		background: #fff;
+	}
+	.content .cont-list li:hover {
+		background-color: #ddd;
+	}
+	/*图片按钮*/
+	.cont-list .icon-img {
+		display: inline;
+		float: left;
+		width: 65px; 
+		width: 25%;
+		height: 80px;
+		border-radius: 4px;
+		-moz-border-radius:4px; /*老的firfox*/
+
+	}
+	.cont-list .icon-text {
+		float: right;
+		width: 73%;
+		height: 78px;
+	}
+	.cont-list .icon-text h3 {
+		margin-bottom: 0;
+		width: 100%;
+		line-height: 24px;
+		border-radius: 0;
+		height: 30px;
+		color: #666;
+		background: none;
+	}
+	.cont-list .icon-text p {
+		height: auto;
+		font-size: 12px;
+		line-height: 18px;
+		color: #666;
+	}
+
+}
+

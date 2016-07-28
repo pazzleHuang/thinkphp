@@ -1,0 +1,62 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="keywords" content="南瓜鱼 用户登录 hyhning thinkphp框架作品" />
+<meta name="description" content="南瓜鱼是个人创作网页" />
+<title>用户注册</title>
+<link rel="stylesheet" type="text/css" href="/thinkphp/Public/CSS/bootstrap.min.css">
+<link rel="stylesheet" href="/thinkphp/Public/Css/login.css" />
+<!--[if lt IE 9]>
+  <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<div class="col-md-6 col-md-offset-3">
+		<div class="panel panel-primary box">
+  			<div class="panel-heading ">
+  				<b> 用户注册</b>
+  			</div>
+ 			<div class="panel-body">
+ 				
+ 				<form class="form-horizontal">
+				  <div class="form-group">
+				    <label for="inputEmail3" class="col-sm-2 control-label">邮箱帐号</label>
+				    <div class="col-sm-10">
+				      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+				    <div class="col-sm-10">
+				      <input type="password1" class="form-control" id="inputPassword3" placeholder="Password">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="inputPassword3" class="col-sm-2 control-label">确认密码</label>
+				    <div class="col-sm-10">
+				      <input type="password" class="form-control" id="inputPassword4" placeholder="Password2">
+				    </div>
+				  </div>
+
+				  <div class="form-group">
+				    <div class="col-sm-offset-2 col-sm-10">
+				      <button type="submit" class="btn btn-primary">注册</button>
+				    </div>
+				  </div>
+				</form>
+				<hr>
+				<a href="../Index/index.html"><span class="glyphicon glyphicon-share-alt"></span> 返回首页</a>
+				<a href="login.html" class="nan-log" >我已经有帐号,登录</a>			
+			</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="/thinkphp/Public/Js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/thinkphp/Public/Js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/thinkphp/Public/Js/Write/login.js"></script>
+</body>
+</html>

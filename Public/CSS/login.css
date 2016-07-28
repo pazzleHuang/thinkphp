@@ -1,0 +1,19 @@
+html,body {
+	background: url(../Images/bgd_01.png)  repeat-x;
+	background-color: #147477;
+}
+
+.box {
+	margin-top: 150px;
+
+	/*background-color: #ddd;*/
+}
+
+.panel-heading {
+	text-align: center;
+}
+.nan-log {
+	margin-left: 10px;
+	padding: 0 10px;
+	border-left: 1px solid #333;
+}
