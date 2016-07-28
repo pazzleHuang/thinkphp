@@ -12,5 +12,5 @@ class : Application\Home\Controller
 
 ##导航：首页 瀑布流图片 html动画 后台管理界面 关于
 
-
+##功能：登录 注册 瀑布流图片 css3动画 
 
