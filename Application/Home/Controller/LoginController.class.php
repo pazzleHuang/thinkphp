@@ -49,4 +49,4 @@ class LoginController extends Controller {
 //     // public function register(){
 
 //     // }
-// }
+}

@@ -10,8 +10,10 @@
 	* { margin: 0; padding: 0; }
 	#box { position: relative; top: 50px; }
 	.pic {  padding: 5px 5px 10px 5px; width:230px;  float: left; }
-	.caption { padding: 10px; background-color: #fff; border: 1px solid #ddd;  }
+	.pic p { color: #666; }
+	.caption { padding: 8px; background-color: #fff; border-bottom: 5px solid #eee;  }
 	.caption img { width: 100%; border-radius: 2px; }
+
 
 </style>
 </head>
@@ -47,118 +49,13 @@
 </nav>
 	<div class="container">
 	<div id="box">
-		<div class="pic">
-			<div class="caption">
-				<img src="/thinkphp/Public/Images/pic/001.jpg">
-	     		<span>label标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="/thinkphp/Public/Images/pic/002.jpg">
-	     		<span>pic label标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="/thinkphp/Public/Images/pic/003.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="/thinkphp/Public/Images/pic/004.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="/thinkphp/Public/Images/pic/005.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="/thinkphp/Public/Images/pic/006.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="/thinkphp/Public/Images/pic/007.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="/thinkphp/Public/Images/pic/015.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="/thinkphp/Public/Images/pic/008.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="/thinkphp/Public/Images/pic/009.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="/thinkphp/Public/Images/pic/010.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="/thinkphp/Public/Images/pic/011.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="/thinkphp/Public/Images/pic/012.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="/thinkphp/Public/Images/pic/013.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>	     		
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="/thinkphp/Public/Images/pic/014.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="/thinkphp/Public/Images/pic/015.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
+		<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="pic">
+				<div class="caption">
+					<img src="/thinkphp/<?php echo ($vo['src']); ?>" />
+		     		<h4><?php echo ($vo['title']); ?></h4>
+		     		<p><?php echo ($vo['des']); ?></p>
+		     	</div>
+			</div><?php endforeach; endif; else: echo "" ;endif; ?>
 	</div> <!--box-->
 </div>
 <script type="text/javascript" src="/thinkphp/Public/Js/jquery-1.11.1.min.js"></script>

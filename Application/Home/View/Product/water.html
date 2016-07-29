@@ -10,8 +10,10 @@
 	* { margin: 0; padding: 0; }
 	#box { position: relative; top: 50px; }
 	.pic {  padding: 5px 5px 10px 5px; width:230px;  float: left; }
-	.caption { padding: 10px; background-color: #fff; border: 1px solid #ddd;  }
+	.pic p { color: #666; }
+	.caption { padding: 8px; background-color: #fff; border-bottom: 5px solid #eee;  }
 	.caption img { width: 100%; border-radius: 2px; }
+
 
 </style>
 </head>
@@ -47,118 +49,15 @@
 </nav>
 	<div class="container">
 	<div id="box">
-		<div class="pic">
-			<div class="caption">
-				<img src="__PUBLIC__/Images/pic/001.jpg">
-	     		<span>label标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="__PUBLIC__/Images/pic/002.jpg">
-	     		<span>pic label标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="__PUBLIC__/Images/pic/003.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="__PUBLIC__/Images/pic/004.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="__PUBLIC__/Images/pic/005.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="__PUBLIC__/Images/pic/006.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="__PUBLIC__/Images/pic/007.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="__PUBLIC__/Images/pic/015.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="__PUBLIC__/Images/pic/008.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="__PUBLIC__/Images/pic/009.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="__PUBLIC__/Images/pic/010.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="__PUBLIC__/Images/pic/011.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="__PUBLIC__/Images/pic/012.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="__PUBLIC__/Images/pic/013.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>	     		
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="__PUBLIC__/Images/pic/014.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
-		<div class="pic">
-			<div class="caption">
-				<img src="__PUBLIC__/Images/pic/015.jpg">
-	     		<span>标题</span>
-	     		<p>...</p>
-	     	</div>
-		</div>
+		<volist name="list" id="vo">
+			<div class="pic">
+				<div class="caption">
+					<img src="__ROOT__/{$vo['src']}" />
+		     		<h4>{$vo['title']}</h4>
+		     		<p>{$vo['des']}</p>
+		     	</div>
+			</div>
+		</volist>
 	</div> <!--box-->
 </div>
 <script type="text/javascript" src="__PUBLIC__/Js/jquery-1.11.1.min.js"></script>
