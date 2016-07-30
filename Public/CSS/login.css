@@ -1,19 +1,47 @@
-html,body {
-	background: url(../Images/bgd_01.png)  repeat-x;
-	background-color: #147477;
+/*login.html*/
+
+html,body{
+	min-width: 480px;
+	width: 100%;
+	background-color: #73bd71;
 }
 
-.box {
-	margin-top: 150px;
-
-	/*background-color: #ddd;*/
-}
-
-.panel-heading {
+.container {
 	text-align: center;
+	vertical-align: middle;
 }
-.nan-log {
-	margin-left: 10px;
+.nan-img {
+	padding-top: 5%;
+	width: 100%;
+}
+/*背景图*/
+.nan-main {
+	padding: 10px 0;
+	height: 400px;
+	background: url(../Images/loginbg3.png)  top center no-repeat;
+	background-size: 100%;
+}
+/*form*/
+.nan-form {
+	margin-top: 10%;
+
+}
+.nan-form .input-group {
+	margin-bottom: 10px;
+}
+#nan-login {
+	margin-top: 10px;
+}
+.nan-link {
+	text-align: left;
+	margin-top: 10px;
+}
+.nan-link a {
 	padding: 0 10px;
-	border-left: 1px solid #333;
+	color: #555555;
+}
+/*底部*/
+footer p {
+	height: 45px;
+	line-height: 45px;
 }
